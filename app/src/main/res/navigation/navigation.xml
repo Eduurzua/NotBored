@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/starFragment">
+
+    <fragment
+        android:id="@+id/starFragment"
+        android:name="com.example.integradornotbored.NavStartFragment"
+        tools:layout="@layout/nav_start"
+        android:label="fragment start">
+        <action
+            android:id="@+id/action_start_to_activities"
+            app:destination="@id/activitiesFragment"/>
+        <action
+            android:id="@+id/action_start_to_terms"
+            app:destination="@id/termsFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.example.integradornotbored.NavTermsFragment"
+        tools:layout="@layout/nav_terms"
+        android:label="fragment terms">
+        <action
+            android:id="@+id/action_terms_to_start"
+            app:destination="@id/starFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/activitiesFragment"
+        android:name="com.example.integradornotbored.NavActivitiesFragment"
+        tools:layout="@layout/nav_activities"
+        android:label="fragment activities">
+        <action
+            android:id="@+id/action_activities_to_suggestion"
+            app:destination="@id/suggestionFragment"/>
+        <action
+            android:id="@+id/action_activities_to_start"
+            app:destination="@id/starFragment"/>
+        <argument
+            android:name="key"
+            app:argType="integer"
+            android:defaultValue="0"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/suggestionFragment"
+        android:name="com.example.integradornotbored.NavSuggestionFragment"
+        tools:layout="@layout/nav_suggestion"
+        android:label="fragment suggestion">
+        <action
+            android:id="@+id/action_suggestion_to_activities"
+            app:destination="@id/activitiesFragment"/>
+        <argument
+            android:name="post"
+            app:argType="com.example.integradornotbored.model.Post"/>
+        <argument
+            android:name="title"
+            app:argType="string"/>
+    </fragment>
+</navigation>

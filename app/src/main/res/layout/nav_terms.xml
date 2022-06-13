@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/notBoredBackground"
+    android:id="@+id/terms"
+    tools:context=".NavigationActivity">
+
+    <TextView
+        android:id="@+id/tvNotBored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notBored"
+        android:textColor="@color/title"
+        android:textSize="@dimen/textSizeNotBored"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTerms"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <TextView
+        android:id="@+id/tvTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/termsAndConditions"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/term"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <ImageButton
+        android:id="@+id/btTermsClose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/notBoredBackground"
+        android:contentDescription="@string/close"
+        android:src="@drawable/ic_baseline_close_24"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <ScrollView
+        android:layout_width="334dp"
+        android:layout_height="411dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvParagraphOne"
+                android:layout_width="match_parent"
+                android:layout_height="141dp"
+                android:text="@string/paragraphOne"
+                android:textAlignment="textStart"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/paragraph" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/tvParagraphTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paragraphTwo"
+                android:textAlignment="textStart"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/paragraph" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="23dp" />
+
+            <TextView
+                android:id="@+id/tvParagraphThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paragraphThree"
+                android:textAlignment="textStart"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/paragraph" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="21dp" />
+
+            <TextView
+                android:id="@+id/tvParagraphFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paragraphFour"
+                android:textAlignment="textStart"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/paragraph" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
